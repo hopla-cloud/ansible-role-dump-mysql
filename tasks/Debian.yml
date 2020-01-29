@@ -1,0 +1,19 @@
+---
+# tasks file for hoplacloud.dump_mysql
+- name: Ensure the dump directory is present
+  file:
+    path: "{{ dump_dir }}"
+    state: directory
+
+- name: Sending vhost_deploy_apache file
+  template:
+    src: dump.sh.j2
+    dest: "{{ dump_dir }}/mysql.sh"
+    mode: '0755'
+
+- name: Ensure a cron task exist
+  cron:
+    name: "dump mysql"
+    minute: "30"
+    hour: "0"
+    job: "{{ dump_dir }}/mysql.sh > /dev/null"

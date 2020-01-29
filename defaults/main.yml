@@ -1,0 +1,6 @@
+---
+# defaults file for hoplacloud.dump_mysql
+dump_dir: "/var/mysql_backup"
+
+#Default retention in days
+retention: "3"

@@ -1,0 +1,20 @@
+galaxy_info:
+  role_name: dump_mysql
+  author: Joffrey Skandera
+  description: Hopla.cloud role for ansible to dump mysql / mariadb with rotation
+  company: hopla.cloud
+
+  license: GPLv3
+
+  min_ansible_version: 2.8
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - bionic
+
+  galaxy_tags:
+    - mysql
+    - mariadb
+
+dependencies: []
