@@ -13,11 +13,13 @@ Mysql root user with unix socket auth.
 Role Variables
 --------------
 
+'''
 # Defaults file for hoplacloud.dump_mysql
 dump_dir: "/var/mysql_backup"
 
 # Default retention in days
 retention: "3"
+'''
 
 Dependencies
 ------------
