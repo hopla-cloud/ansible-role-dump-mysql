@@ -1,17 +1,23 @@
 Role Name
 =========
+hoplacloud.dump_mysql
+
 
 Configure dump mysql with rotation for hopla.cloud linux system
 
 Requirements
 ------------
 
-None.
+Mysql root user with unix socket auth.
 
 Role Variables
 --------------
 
-None.
+# Defaults file for hoplacloud.dump_mysql
+dump_dir: "/var/mysql_backup"
+
+# Default retention in days
+retention: "3"
 
 Dependencies
 ------------
