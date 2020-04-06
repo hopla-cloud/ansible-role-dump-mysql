@@ -8,7 +8,7 @@
 - name: Sending vhost_deploy_apache file
   template:
     src: dump.sh.j2
-    dest: "{{ dump_dir }}/mysql.sh"
+    dest: "/usr/src/mysql_backup.sh"
     mode: '0755'
 
 - name: Ensure a cron task exist
@@ -16,4 +16,4 @@
     name: "dump mysql"
     minute: "30"
     hour: "0"
-    job: "{{ dump_dir }}/mysql.sh > /dev/null"
+    job: "/usr/src/mysql_backup.sh > /dev/null"
